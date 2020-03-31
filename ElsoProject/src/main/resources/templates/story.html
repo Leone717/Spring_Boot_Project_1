@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title th:text="${pageTitle}">Napi Történet</title>
+    
+    <link rel="stylesheet" th:href="@{css/main.css}" href="../static/css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Calibri' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet' type='text/css' />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-5" aria-expanded="false">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">https://github.com/Leone717</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
+                <p class="navbar-text navbar-right" th:text="#{yourip}">IP címed: <a href="#" class="navbar-link">127.0.0.1</a></p>
+            </div>
+        </div>
+    </nav>
+
+   
+    <article>
+        <header>
+            <h1 th:text="${story.title}">Ez itt a cím</h1> 
+            <p th:text="${#dates.format(story.posted, 'yyyy.MM.dd HH:mm')}">Posted on September 30, 2019 at 19:00 PM</p>
+        </header>
+    
+ 	    <section th:utext="${story.content}">
+             <p>Bacon ipsum dolor amet flank alcatra turkey bresaola, venison ground round pork chop ham andouille beef sirloin pork belly bacon. Pancetta corned beef andouille prosciutto tongue cupim landjaeger chuck strip steak shoulder cow ham hock sirloin. Jowl boudin capicola andouille swine beef strip steak ribeye drumstick tongue burgdoggen sirloin chuck short loin picanha. Meatloaf ground round jowl alcatra kielbasa. Chicken ball tip drumstick meatball.</p>
+            <p>Ham hock ham chicken, salami pork belly kielbasa picanha filet mignon bacon chuck swine prosciutto strip steak rump. Beef ribs meatball picanha ham hock pork chop tongue pork loin brisket cupim turkey bresaola meatloaf pig pastrami. Salami tongue tail, strip steak shoulder shank meatloaf sausage sirloin ham pig turducken spare ribs. Tail jerky swine spare ribs jowl, prosciutto turducken beef.</p>
+            <p>Tongue burgdoggen jowl, fatback rump sirloin boudin strip steak cow ground round. Porchetta doner corned beef jowl flank cow picanha beef ribs salami swine strip steak short loin fatback sausage prosciutto. Beef ribs cow prosciutto frankfurter, meatloaf landjaeger capicola pork belly turducken pork chop jerky ground round strip steak. Jerky ball tip prosciutto corned beef meatball shank fatback buffalo capicola.</p>
+      		<p>Jowl salami beef ribs ham jerky venison shoulder, shankle buffalo sirloin. Bresaola landjaeger short ribs cow venison picanha jowl ground round pig frankfurter pork belly shoulder beef ribs fatback. Tri-tip pork loin chicken turducken. Short loin porchetta t-bone pork picanha shank. Leberkas cow salami, bacon prosciutto t-bone spare ribs picanha chicken capicola chuck swine jowl. Capicola shank turducken t-bone, pastrami cow shoulder. Shoulder landjaeger bresaola turkey ham rump spare ribs filet mignon ham hock.</p>
+      		<p>Ground round drumstick pork loin, frankfurter capicola tri-tip andouille. Doner ham shoulder venison. Capicola rump strip steak meatloaf alcatra. Rump swine fatback, spare ribs burgdoggen drumstick ham hock turducken ribeye pork loin shoulder buffalo.</p>
+      		<p></p>
+        </section>
+        
+        <footer>
+            <address>
+                Beküldte: <span th:text="${story.blogger.name}">Anonymous</span>
+            </address>
+        </footer>
+        <hr/>
+    </article>
+
+    <footer>
+        <p th:text="#{footerText}">Készült Thanos megbízásából</p>
+    </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" ></script>
+</body>
+</html>
