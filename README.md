@@ -4,9 +4,7 @@ In this tutorial, you can follow me, how we can build a SpringBoot Application:
 
 
 
-[Building Spring Starter Project #1](https://github.com/Leone717/Spring_Boot_Project_1/blob/master/Spring%20Starter%20Project%201.md)
-
-
+[Building Spring Starter Project #1](https://github.com/Leone717/Spring_Boot_Project_1/blob/master/Spring%20Starter%20Project%201.md)  
 [Building Spring Starter Project #2](https://github.com/Leone717/Spring_Boot_Project_1/blob/master/Spring%20Starter%20Project%202.md)  
 [Building Spring Starter Project #3](https://github.com/Leone717/Spring_Boot_Project_1/blob/master/Spring%20Starter%20Project%203.md)
 
